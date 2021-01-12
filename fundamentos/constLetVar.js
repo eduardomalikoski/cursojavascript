@@ -1,0 +1,9 @@
+/*
+    keyword             const   let     var
+    global scope        NO      NO      YES
+    function scope      YES     YES     YES
+    block scope         YES     YES     YES
+    can be reassigned   NO      YES     YES
+
+    Var pode declarar e utilizar em qualquer escopo.
+*/
