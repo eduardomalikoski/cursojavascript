@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Especificidade CSS</title>
+    <style>
+        /* em linhas gerais
+           1. regra com !important
+           2. seletores mais específicos
+           3. última regra processada (empate)
+           classes tem prioridade
+        */
+
+        p {
+            background-color: #aaa;
+
+        }
+
+        /* !importante não tem prioridade em background, mas tem em padding */
+        .observacao {
+            background-color: red;
+            border: solid 10px rgb(97, 97, 97);
+            padding: 200px!important;
+            font-size: 40px;
+        }
+
+        /* esse tem prioridade do q os outros */
+        p.observacao {
+            padding: 5px 60px;
+            background: linear-gradient(to left, red, blue);
+        }
+    </style>
+</head>
+
+<body>
+    <p class='observacao'>Olha essa observação!!!!</p>
+    <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity">Especificidades</a>
+</body>
+
+</html>
